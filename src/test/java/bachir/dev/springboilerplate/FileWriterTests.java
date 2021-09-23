@@ -14,11 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertLinesMatch;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
-public class FileWriterTests {
+class FileWriterTests {
 
     @Test
     @DisplayName("File writing test")
-    public void thisMethodDoesNotThrowExceptio(@TempDir Path tempDir) throws IOException {
+    void thisMethodDoesNotThrowExceptio(@TempDir Path tempDir) throws IOException {
         Path tempfile = tempDir.resolve("tempfile.txt");
         FileWriter.writeFile(tempfile, "test");
 
